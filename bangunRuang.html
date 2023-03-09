@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 1</title>
+</head>
+<body>
+    
+    <script>
+
+        document.write("<h2 align='center'>Bangun Ruang</h2>")
+        document.write("<hr/>")
+        //jajar genjang
+        var alas = 7;
+        var tinggi = 10;
+
+        var sisiA = 9;
+        var sisiB = 6;
+        var sisiC = 8;
+        var sisiD = 7;  
+
+        let luasJajar = alas * tinggi;
+        let kelilingJajar = sisiA + sisiB + sisiC + sisiD;
+
+        document.write("Diketahui "+ 
+        "sebuah jajar genjang memiliki :"
+        +"<br>"
+        +"alas = "+alas+" cm,  dan"
+        +"<br>"
+        +"tinggi = "+tinggi+ " cm"
+        +"<br>"
+        +"sisi a = "+sisiA+ " cm"
+        +"<br>"
+        +"sisi b = "+sisiB+ " cm"
+        +"<br>"
+        +"sisi c = "+sisiC+ " cm"
+        +"<br>"
+        +"sisi d = "+sisiD+ " cm" 
+        +"<br> Maka luas dari jajar genjang tersebut"
+        +" adalah = " + luasJajar+ " cm"
+        +"<br> Dan keliling dari jajar genjang tersebut"
+        +" adalah = "+kelilingJajar+ " cm"
+        );
+        
+        document.write("<hr/>")
+
+        //persegi panjang
+        var panjang = 3;
+        var lebar = 4;
+        
+        let luasPersegi = panjang * lebar;
+        let kelilingPersegi = (2*panjang)+(2*lebar);
+
+        document.write("Diketahui "+ 
+        "sebuah persegi panjang memiliki :"
+        +"<br>"
+        +"panjang = "+panjang+" cm,  dan"
+        +"<br>"
+        +"lebar = "+lebar+ " cm" 
+        +"<br> Maka luas dari persegi panjang tersebut"
+        +" adalah = " + luasPersegi+ " cm"
+        +"<br> Dan keliling dari persegi panjang tersebut"
+        +" adalah = "+kelilingPersegi+ " cm"
+        );
+
+        document.write("<hr/>")
+
+        //segitiga
+        var alasSegitiga = 12;
+        var tinggSegitiga = 17;
+
+        var sisiSegitigaA = 6;
+        var sisiSegitigaB = 5;
+        var sisiSegitigaC = 4;
+
+        let luasSegitiga = 0.5 * alasSegitiga * tinggSegitiga; 
+        let kelilingSegitiga = sisiSegitigaA + sisiSegitigaB + sisiSegitigaC;
+          
+        document.write("Diketahui "+ 
+        "sebuah Segitiga memiliki :"
+        +"<br>"
+        +"alas = "+alasSegitiga+" cm,  dan"
+        +"<br>"
+        +"tinggi = "+tinggSegitiga+ " cm" 
+        +"<br>"
+        +"sisi a = "+sisiSegitigaA+ " cm"
+        +"<br>"
+        +"sisi b = "+sisiSegitigaB+ " cm"
+        +"<br>"
+        +"sisi c = "+sisiSegitigaC+ " cm"
+        +"<br> Maka luas dari segitiga tersebut"
+        +" adalah = " + luasSegitiga+ " cm"
+        +"<br> Dan keliling dari segitiga tersebut"
+        +" adalah = "+kelilingSegitiga+ " cm"
+        );
+
+        document.write("<hr/>")
+    </script>
+</body>
+</html>
