@@ -26,7 +26,7 @@
 
 
    let pelanggan = "aziz";
-   let produk = "tv";
+   let produk = "motor";
 
    if (produk == 'tv'){
     harsat = 3000000;
@@ -41,13 +41,16 @@
     harsat = 0;
    }
 
-   let jmlBeli = 10;
+   let jmlBeli = 13;
    let bruto = harsat * jmlBeli;
+   let diskon = (produk == 'motor') ? 0.1 * bruto : 0;
+   let total_diskon = bruto - diskon;
 
    document.write("data pembeli: "+
    "<br> pelanggan : "+pelanggan+
    "<br> produk yang dibeli : "+produk+
    "<br> harga satuan : "+harsat+
    "<br> jumlah barang yang dibeli : "+jmlBeli+
-   "<br> total harga dari pembelian "+bruto)
+   "<br> total harga dari pembelian "+bruto+
+   "<br> hasil diskon "+total_diskon)
 </script>
