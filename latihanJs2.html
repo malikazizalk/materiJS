@@ -3,9 +3,13 @@
     let totalBelanja = 50000;
     let keterangan = "";
 
-    if(totalBelanja . 100000){
+    if(totalBelanja > 10000){
         keterangan = "selamat anda dapat hadiah";
+    }else {
+        keterangan = "terimakasih sudah berbelanja";
     }
+
+    document.write(keterangan);
 
     
 
@@ -21,7 +25,8 @@
     else grade = "";
 
     document.write("Siswa bernama "+siswa+" dengan nilai "+nilai+" gradenya "+grade);
-    */
+    
+
 
 
 
@@ -53,4 +58,68 @@
    "<br> jumlah barang yang dibeli : "+jmlBeli+
    "<br> total harga dari pembelian "+bruto+
    "<br> hasil diskon "+total_diskon)
+
+   
+
+
+   
+    let siswa = "malik aziz";
+    let nilai = 80.5;
+    let grade = "";
+
+    if (nilai > 85 && nilai <= 100) grade = "A";
+    else if(nilai > 75 && nilai <= 85) grade = "B";
+    else if(nilai > 60 && nilai <= 75) grade = "C";
+    else if(nilai > 30 && nilai <= 60) grade = "D";
+    else if(nilai >= 0 && nilai <= 30) grade = "E";
+    else grade = "";
+
+
+    switch(grade){
+        case "A": predikat = "memuaskan"; break;
+        case "B": predikat = "baik"; break;
+        case "C": predikat = "cukup"; break;
+        case "D": predikat = "kurang"; break;
+        case "E": predikat = "sangat kurang"; break;
+        default: predikat = ""; break;
+    }
+
+    document.write("Siswa bernama "+siswa+"<br> dengan nilai "
+    +nilai+"<br> gradenya "+grade+"<br> predikatnya "+predikat);
+    */
+
+
+
+    let pelanggan = "aziz";
+    let produk = "tv";
+
+    let harsat = 0;
+    switch(produk){
+        case 'tv': harsat = 3000000; break;
+        case 'motor': harsat = 12000000; break;
+        case 'kulkas': harsat = 4000000; break;
+        default: harsat = 0;
+    }
+
+    let jmlBeli = 3;
+    let bruto = harsat * jmlBeli;
+    let ppn = bruto * 0.11;
+
+    let diskon = 0;
+    if (produk == 'tv') diskon = 0.3 * bruto;
+    else if(produk == 'motor') diskon = 0.2 * bruto;
+    else diskon = 0.05 * bruto;
+
+    let total_diskon = bruto - diskon;
+
+    document.write("data pembelian "+
+    "<br> pelanggan : "+pelanggan+
+    "<br> produk : "+produk+
+    "<br> jumlah beli produk : "+jmlBeli+
+    "<br> harga satuan : "+harsat+
+    "<br> total harga : "+bruto+
+    "<br> diskon : "+diskon+
+    "<br> ppn : "+ppn+
+    "<br> total diskon yang didapat : "+total_diskon);
+
 </script>
