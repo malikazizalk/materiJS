@@ -1,0 +1,47 @@
+<script>
+    /*
+     //array 1d
+     var buah = ['pepaya', 'mangga', 'jeruk', 'pisang'];
+
+    document.write('mencetak element array :');
+    for(var i =0; i < buah.length; i++){
+        document.write('<br>'+buah[i])
+    }
+    */
+
+
+//array 2d (array of object)
+let p1 = {nama:"aziz", nilai:80};
+let p2 = {nama:"arya", nilai:81};
+let p3 = {nama:"aini", nilai:59};
+let p4 = {nama:"ainun", nilai:83};
+let p5 = {nama:"agus", nilai:55};
+
+let person = [p1,p2,p3,p4,p5]
+</script>
+
+<h3>
+    <table style = "padding: 10; text-align: center; width: 100%;">
+        <thead>
+            <tr>
+                <th>no</th>
+                <th>nama</th>
+                <th>alamat</th>
+            </tr>
+        </thead>
+        <tbody>
+            <script>
+                var no = 1;
+                for (p of person){
+                    let ket = (p.nilai >= 60) ? 'lulus' : 'gagal';
+                    document.write(`<tr bgcolor = "">
+                <td>${no++}</td>
+                <td>${p.nama}</td>
+                <td>${p.nilai}</td>
+                <td>${ket}</td>
+            </tr>`);
+        }
+            </script>
+        </tbody>
+    </table>
+</h3>
