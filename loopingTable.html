@@ -1,10 +1,10 @@
 <script>
     //array 2d (array of object)
-    let p1 = {nama:"aziz", nilai:80};
-    let p2 = {nama:"arya", nilai:81};
-    let p3 = {nama:"aini", nilai:59};
-    let p4 = {nama:"ainun", nilai:83};
-    let p5 = {nama:"agus", nilai:55};
+    let p1 = {nama:"Aziz", nilai:30};
+    let p2 = {nama:"Arya", nilai:81};
+    let p3 = {nama:"Aini", nilai:62};
+    let p4 = {nama:"Ainun", nilai:86};
+    let p5 = {nama:"Agus", nilai:55};
 
     let person = [p1,p2,p3,p4,p5]
 </script>
@@ -13,19 +13,19 @@
     <table style = "padding: 10; text-align: center; width: 100%;">
         <thead>
             <tr>
-                <th>no</th>
-                <th>nama</th>
-                <th>nilai</th>
-                <th>alamat</th>
-                <th>grade</th>
-                <th>predikat</th>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Nilai</th>
+                <th>Alamat</th>
+                <th>Grade</th>
+                <th>Predikat</th>
             </tr>
         </thead>
         <tbody>
             <script>
                 var no = 1;
                 for (p of person){
-                    let ket = (p.nilai >= 60) ? 'lulus' : 'gagal';
+                    let ket = (p.nilai >= 60) ? 'Lulus' : 'Gagal';
 
                 //grade
                 let grade = "";
@@ -39,11 +39,11 @@
 
                 //predikat
                 switch(grade){
-                case "A": predikat = "memuaskan"; break;
-                case "B": predikat = "baik"; break;
-                case "C": predikat = "cukup"; break;
-                case "D": predikat = "kurang"; break;
-                case "E": predikat = "sangat kurang"; break;
+                case "A": predikat = "Memuaskan"; break;
+                case "B": predikat = "Baik"; break;
+                case "C": predikat = "Cukup"; break;
+                case "D": predikat = "Kurang"; break;
+                case "E": predikat = "Sangat Kurang"; break;
                 default: predikat = ""; break;
                 }
 
