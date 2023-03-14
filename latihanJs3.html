@@ -1,4 +1,5 @@
 <script>
+    /*
     // looping
     document.write('bilangan 1'+'<br>bilangan 2'+'<br>bilangan 3');
     document.write('<hr> cetak bilangan 1 sampai 50');
@@ -18,4 +19,46 @@
 
     //mencetak bilangan ganjil
     document.write('<hr> mencetak bilangan ganjil');
+    let ganjil;
+    for(ganjil = 1; ganjil <= 20; ganjil++){
+        if(ganjil % 2 == 1){
+            document.write('<br> bilangan ganjil : '+ganjil);
+        }
+    }
+
+    //coba 
+    let ganjil1;
+    for (ganjil1 = 1; ganjil1 <= 20; ganjil1 += 2){
+        document.write('<hr><br> ciba bilangan '+ ganjil1);
+    }
+
+    //looping while
+    document.write("<hr>---- cetak angka 1 sampai 30 -----");
+    let angka2 = 1;
+    while(angka2 <= 30){
+        document.write("<br>cetak bilangan "+angka2);
+        angka2++;
+    }
+    */
+
+    //loop bilangan prima
+    document.write('<hr>membuat bilangan prima');
+
+    var i;
+    var y;
+    
+
+    for(i = 1; i <= 30; i++){
+        var prim = 0;
+        for(y = 1; y <= i; y++){
+            if(i % y == 0){
+                prim++;
+            }
+        }
+        if(prim == 2.){
+            document.write('<br>bilangan prima : '+i);
+        }
+    }
+
+
 </script>
