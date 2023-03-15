@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--pemanggilan id-->
+    <h1 id = "coba">hello world</h1>
+    <h1 id = "coba"></h1>
+    <!--pemaanggilan class-->
+    <h1 class = "coba1">hello world</h1>
+    <!--pemanggilan tag nama-->
+    <h2>coba tag</h2>
+    <h1 id="warna">warna merah</h1>
+
+    <script>
+        //pembuatan id javascrpt
+        var x = document.getElementById("coba").innerHTML = "hello world baru";
+        //pembuatan class javascript
+        var y = document.getElementsByClassName("coba1");
+        //pembuatan elemen tag jasvascript
+        var z = document.getElementsByTagName("h2");
+        //pemanggilan atribut style
+        var zi = document.getElementById("warna").style.color = "red";
+    </script>
+</body>
+</html>
