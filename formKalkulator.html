@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tugas js 4</title>
+
+    <link rel="stylesheet" type="text/css" href="../materiJS/css/formKalkulator.css">
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section class="portal">
+    <form id="formKalkulator" align="center">
+        <h2>Form Kalkulator</h2>
+        <table align="center" cellpadding="10">
+            <tr>
+                <th colspan="3" >Input</th>
+            </tr>
+            <tr>
+                <td><label for="">Angka Pertama   </label></td>
+                <td colspan="2"><input type="text" name="angka1" placeholder="masukkan angka pertama" ></td>
+                
+            </tr>
+            <tr>
+                <td><label for="">Angka Kedua   </label></td>
+                <td colspan="2"><input type="text" name="angka2" placeholder="masukkan angaka kedua"></td>
+                
+            </tr>
+            <tr>
+                <th colspan="3" >Output</th>
+            </tr>
+            <tr>
+                <td colspan="3" rowspan="4"><input type="text" name="hasil" disabled></td>
+                
+            </tr>
+           <tr></tr>
+           <tr></tr>
+           <tr></tr>
+            <tr>
+                <tr>
+                    <td colspan="2"><p id="peringatan" align="center"></p></td>
+                </tr>
+                <th colspan="2">
+                    <input type="button" name="btn_tambah" value="+" onclick="tambah()" >
+                    <input type="button" name="btn_kurang" value="-" onclick="kurang()">
+                    <input type="button" name="btn_kali" value="X" onclick="kali()">
+                    <input type="button" name="btn_bagi" value=":" onclick="bagi()">
+                    <input type="button" name="btn_pangkat" value="*2" onclick="pangkat()">
+                </th>
+            </tr>
+        </table>
+    </form>
+    
+    </section>
+
+    <script src="../materiJS/js/formKalkulator.js"></script>
+
+</body>
+</html>

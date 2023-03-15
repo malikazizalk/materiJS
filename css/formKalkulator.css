@@ -1,0 +1,24 @@
+
+/* kotak form */
+.portal{
+    display: grid;
+    place-items: center;
+    min-height: 10vh;
+}
+
+
+/* form */
+form {
+    background: var(--bg-light);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    width: min(100%, 470px);
+    padding: 50px;
+}
+
+th{
+    background-color: darkgray;
+}
+
+td{
+    background-color: cornsilk;
+}
