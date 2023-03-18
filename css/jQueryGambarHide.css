@@ -1,0 +1,7 @@
+
+/* ukuran gambar dan pointer */
+img {
+    max-width: 20%;
+    margin: 50px;
+    cursor: pointer;
+}

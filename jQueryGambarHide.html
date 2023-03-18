@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gambar Hide dengan Jquery</title>
+    <link rel="stylesheet" type="text/css" href="css/jQueryGambarHide.css">
+    <script src="js/jqueryUncomprase-3.6.4.js"></script>
+</head>
+<body>
+   
+    <!-- section gambar -->
+    <div class="img-container">
+		<img src="img/logoFtek.jpg">
+		<img src="img/content1.png">
+		<img src="img/content3.jpg">
+        <img src="img/content2.png">
+	</div>
+
+	<script>
+		$(document).ready(function() {
+
+            // pemanggilan jquery dengan selector tag gambar
+			$('img').click(function() {
+                //pengguanaan effect funtion hide
+				$(this).hide();
+			});
+		});
+	</script>
+
+</body>
+</html>
