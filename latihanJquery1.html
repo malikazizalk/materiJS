@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Pemanggilan Jquery</title>
+    <script src="../materiJS/js/jquerUncompes.3.6.4.js"></script>
+</head>
+<body>
+    
+    
+
+    <script>
+            // A $( document ).ready() block.
+        $( document ).ready(function() {
+
+            //pemanggilan jquery dengan selector tag
+            $("input").click(function(){
+                alert("Selamat Belajar Jquery");
+            });
+            
+            //pembuatan jquery dengan id
+            $("#panggil_id").css("color", "orange");
+            
+            //pemanggilan jquery dengan class
+            $(".panggil_class").css("color", "blue");
+
+            //menggunakan effect
+            $( "p" ).hide(1000);
+            $("p").slideDown(900);
+        });
+    </script>
+    <h3 id="panggil_id">selamat belajar jquery menggunakan pemanggilan id</h3>
+    <h1 class="panggil_class">selamat belajar jquery mengguanakan pemanggilan class </h1>
+
+    <p>Teksnya hilang</p>
+    <input type="submit" value="salam">
+</body>
+</html>
