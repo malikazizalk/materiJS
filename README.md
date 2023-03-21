@@ -1,2 +1,2 @@
-# latihanJS1
-latihan JS dasar
+# latihan_msib_htp
+kumpulan latihan
