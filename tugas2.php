@@ -11,7 +11,7 @@
     <!-- form -->
     <form action="" method="GET">
         <fieldset>
-        <legend>Data Rincian Gaji Pegawai</legend>
+        <legend>Form Data Pegawai</legend>
 
         <!-- nama -->
         <label for="">Nama</label>
@@ -150,7 +150,7 @@
     <fieldset>
 
     <!-- hasil -->
-    <legend>Output :</legend>
+    <legend>Data Rincian Gaji Pegawai :</legend>
 
     Nama Mahasiswa          : <?= $nama ?>
     <br> Jabatan            : <?= $jabatan ?>
