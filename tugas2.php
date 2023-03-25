@@ -95,6 +95,8 @@
     $agama      = $_GET['agama'];
     $button     = $_GET['proses'];
 
+
+
     //logika
 
     //gaji pokok
@@ -106,15 +108,12 @@
         default :               $gp     =        0;
         }
 
-
     //coba 
     // if($jabatan == 'Manager') $gp = 20000000;
     // else if($jabatan == 'Asisten' ) $gp = 15000000;
     // else if($jabatan == 'Kepala Bagian') $gp = 10000000;
     // else if($jabatan == 'Staff' ) $gp = 4000000;
     // else $gp = "";
-
-    
 
     //tunjangan jabatan
     $tj = 0.2 * $gp;
