@@ -99,11 +99,11 @@
 
     //gaji pokok
     switch ($jabatan){
-        case "Manager" :        $gp = 20000000; break;
-        case "Asisten" :        $gp = 15000000; break;
-        case "Kepala_Bagian" :   $gp = 10000000; break;
-        case "Staff" :          $gp =  4000000; break;
-        default :               $gp = 0;
+        case "Manager" :        $gp     = 20000000; break;
+        case "Asisten" :        $gp     = 15000000; break;
+        case "Kepala_Bagian" :  $gp     = 10000000; break;
+        case "Staff" :          $gp     =  4000000; break;
+        default :               $gp     =        0;
         }
 
 
