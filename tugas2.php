@@ -99,13 +99,13 @@
 
     //logika
 
-    //gaji pokok
+    //gaji pokok (switch case)
     switch ($jabatan){
-        case "Manager" :        $gp     = 20000000; break;
-        case "Asisten" :        $gp     = 15000000; break;
-        case "Kepala_Bagian" :  $gp     = 10000000; break;
-        case "Staff" :          $gp     =  4000000; break;
-        default :               $gp     =        0;
+        case "Manager"       : $gp     = 20000000; break;
+        case "Asisten"       : $gp     = 15000000; break;
+        case "Kepala_Bagian" : $gp     = 10000000; break;
+        case "Staff"         : $gp     =  4000000; break;
+        default              : $gp     =        0;
         }
 
     //coba 
@@ -129,8 +129,8 @@
     //gaji kotor 
     $gk = $gp + $tj + $tk;
 
-    //zakat profesi
-    $zakat = ($agama == 'Islam' && $gk >= 6000000) ?  $zp = 0.025 * $gk : $zp = 0 ;
+    //zakat profesi (ternary)
+    $zakat = ($agama == 'Islam' && $gk >= 6000000) ?   0.025 * $gk :  0 ;
     
     // if($agama == 'Islam' && $gk >= 6000000){
     //     $zp = 0.025 * $gk ;
