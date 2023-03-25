@@ -155,13 +155,13 @@
 
     Nama Mahasiswa          : <?= $nama ?>
     <br> Jabatan            : <?= $jabatan ?>
+    <br> Status             : <?= $status ?>
+    <br> Jumlah Anak        : <?= $anak ?>
+    <br> Agama              : <?= $agama ?> 
     <br> Gaji Pokok         : Rp. <?= $gp ?>
     <br> Tunjangan Jabatan  : Rp. <?= $tj ?>
-    <br> Status             : <?= $status ?>
-    <br> Jumlah Anak        : <?= $anak ?> 
     <br> Tunjangan Keluarga : Rp. <?= $tk ?>
     <br> Gaji Kotor         : Rp. <?= $gk ?>
-    <br> Agama              : <?= $agama ?>
     <br> Zakat              : Rp. <?= $zakat ?>
     <br> Gaji Bersih        : Rp. <?= $gb ?>
     
