@@ -131,14 +131,16 @@
     $gk = $gp + $tj + $tk;
 
     //zakat profesi
-    if($agama == 'Islam' && $gk >= 6000000){
-        $zp = 0.025 * $gk ;
-    }else{
-        $zp = 0;
-    }
+    $zakat = ($agama == 'Islam' && $gk >= 6000000) ?  $zp = 0.025 * $gk : $zp = 0 ;
+    
+    // if($agama == 'Islam' && $gk >= 6000000){
+    //     $zp = 0.025 * $gk ;
+    // }else{
+    //     $zp = 0;
+    // }
 
     //gaji bersih
-    $gb = $gk - $zp;
+    $gb = $gk - $zakat;
 
     //tombol
     if(isset($button)){
@@ -160,7 +162,7 @@
     <br> Tunjangan Keluarga : Rp. <?= $tk ?>
     <br> Gaji Kotor         : Rp. <?= $gk ?>
     <br> Agama              : <?= $agama ?>
-    <br> Zakat              : Rp. <?= $zp ?>
+    <br> Zakat              : Rp. <?= $zakat ?>
     <br> Gaji Bersih        : Rp. <?= $gb ?>
     
     </fieldset>
