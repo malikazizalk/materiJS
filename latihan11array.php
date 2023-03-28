@@ -14,7 +14,7 @@ $ar_judul = ['no', 'kode', 'buah', 'harga', 'jumlah'];
 $jumlah_data = count($buah2an);
 $jml_kg = array_column($buah2an, 'jml');
 $total_kg = array_sum($jml_kg);
-$harga_total = array_sum($jml_kg);
+// $harga_total = array_sum($jml_kg);
 $max_kg = max($jml_kg);
 $min_kg = min($jml_kg);
 $keterangan = [
@@ -22,7 +22,7 @@ $keterangan = [
     'total kg'=>$total_kg,
     'jumlah tertinggi'=>$max_kg,
     'jumlah terendah'=>$min_kg,
-]
+    ]
 ?>
 
 <!-- cetak array -->
