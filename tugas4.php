@@ -61,6 +61,7 @@ $domisili = ["jakarta",
                     <td>:</td>
                     <td>
                         <select name="prodi" id="">
+                        <option value="" disabled selected>----- prodi -----</option>
                             <?php
                             foreach($ar_prodi as $prodi => $v){
                             ?>
@@ -85,6 +86,7 @@ $domisili = ["jakarta",
                     <td>:</td>
                     <td>
                         <select name="domisili" id="">
+                        <option value="" disabled selected>----- tempat tinggal -----</option>
                             <?php
                             foreach($domisili as $d){
                             ?>
