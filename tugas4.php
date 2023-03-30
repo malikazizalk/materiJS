@@ -136,6 +136,11 @@ foreach($skill as $total) {
     }
 }
 
+// $skor= 0;
+// foreach($skill as $ss){
+//     $skor += $ar_skill[$ss]
+// }
+
 // penggunaan fungsi untuk menentukan kategori skill
 function ks($ts) {
     if ($ts >= 100 && $ts <=150){
