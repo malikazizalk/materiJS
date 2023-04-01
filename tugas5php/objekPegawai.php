@@ -1,5 +1,5 @@
 <?php
-require 'tugas5pegawai.php';
+require 'pegawai.php';
 
 $pegawai1 = new pegawai('01111', 'Andi', 'manager', 'islam', 'menikah');
 $pegawai2 = new Pegawai('01112', 'Ameri', 'asisten manager', 'hindu', 'jomblo');
