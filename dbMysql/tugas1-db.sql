@@ -1,5 +1,5 @@
-//tugas mandiri
-//8. buat table produk
+-- //tugas mandiri
+-- //1. buat table produk
 MariaDB [dbtoko]> CREATE TABLE produk(
     -> id int NOT NULL auto_increment primary key,
     -> kode varchar(10) unique,
@@ -27,7 +27,7 @@ MariaDB [dbtoko]> DESC produk;
 +-----------------+-------------+------+-----+---------+----------------+
 
 
-//9. buat table pesanan_items
+-- //2. buat table pesanan_items
 MariaDB [dbtoko]> CREATE TABLE pesanan_items(
     -> id int NOT NULL auto_increment primary key,
     -> produk_id int NOT NULL REFERENCES produk(id),
@@ -52,7 +52,7 @@ MariaDB [dbtoko]> DESC pesanan_items;
 +------------+---------+------+-----+---------+----------------+
 
 
-//10. buat table vendor
+-- //3. buat table vendor
 MariaDB [dbtoko]> CREATE TABLE vendor(
     -> id int NOT NULL auto_increment primary key,
     -> nomor varchar(4),
@@ -77,7 +77,7 @@ MariaDB [dbtoko]> DESC vendor;
 +--------+-------------+------+-----+---------+----------------+
 
 
-//11. buat table pembelian
+-- //4. buat table pembelian
 MariaDB [dbtoko]> CREATE TABLE pembelian(
     -> id int NOT NULL auto_increment primary key,
     -> tanggal varchar(45),
@@ -100,3 +100,77 @@ MariaDB [dbtoko]> DESC pembelian;
 | harga     | double      | YES  |     | NULL    |                |
 | vendor_id | int(11)     | NO   |     | NULL    |                |
 +-----------+-------------+------+-----+---------+----------------+
+
+
+-- //tampilan awal data table pelanggan
+MariaDB [dbtoko]> DESC pelanggan;
++-----------+-------------+------+-----+---------+----------------+
+| Field     | Type        | Null | Key | Default | Extra          |
++-----------+-------------+------+-----+---------+----------------+
+| id        | int(11)     | NO   | PRI | NULL    | auto_increment |
+| kode      | varchar(10) | YES  | UNI | NULL    |                |
+| nama      | varchar(45) | YES  |     | NULL    |                |
+| jk        | char(1)     | YES  |     | NULL    |                |
+| tmp_lahir | varchar(20) | YES  |     | NULL    |                |
+| tgl_lahir | date        | YES  |     | NULL    |                |
+| email     | varchar(30) | YES  |     | NULL    |                |
+| kartu_id  | int(11)     | NO   |     | NULL    |                |
++-----------+-------------+------+-----+---------+----------------+
+
+
+-- //5. Tambahkan kolom alamat pada pelanggan dengan tipe data varchar(40)
+MariaDB [dbtoko]> ALTER TABLE pelanggan ADD alamat varchar(40);
+
+MariaDB [dbtoko]> DESC pelanggan;
++-----------+-------------+------+-----+---------+----------------+
+| Field     | Type        | Null | Key | Default | Extra          |
++-----------+-------------+------+-----+---------+----------------+
+| id        | int(11)     | NO   | PRI | NULL    | auto_increment |
+| kode      | varchar(10) | YES  | UNI | NULL    |                |
+| nama      | varchar(45) | YES  |     | NULL    |                |
+| jk        | char(1)     | YES  |     | NULL    |                |
+| tmp_lahir | varchar(20) | YES  |     | NULL    |                |
+| tgl_lahir | date        | YES  |     | NULL    |                |
+| email     | varchar(30) | YES  |     | NULL    |                |
+| kartu_id  | int(11)     | NO   |     | NULL    |                |
+| alamat    | varchar(40) | YES  |     | NULL    |                |
++-----------+-------------+------+-----+---------+----------------+
+
+
+-- //6. Ubah kolom nama pada pelanggan menjadi nama_pelanggan
+MariaDB [dbtoko]> ALTER TABLE pelanggan CHANGE nama nama_pelanggan varchar(45);
+
+MariaDB [dbtoko]> DESC pelanggan;
++----------------+-------------+------+-----+---------+----------------+
+| Field          | Type        | Null | Key | Default | Extra          |
++----------------+-------------+------+-----+---------+----------------+
+| id             | int(11)     | NO   | PRI | NULL    | auto_increment |
+| kode           | varchar(10) | YES  | UNI | NULL    |                |
+| nama_pelanggan | varchar(45) | YES  |     | NULL    |                |
+| jk             | char(1)     | YES  |     | NULL    |                |
+| tmp_lahir      | varchar(20) | YES  |     | NULL    |                |
+| tgl_lahir      | date        | YES  |     | NULL    |                |
+| email          | varchar(30) | YES  |     | NULL    |                |
+| kartu_id       | int(11)     | NO   |     | NULL    |                |
+| alamat         | varchar(40) | YES  |     | NULL    |                |
++----------------+-------------+------+-----+---------+----------------+
+
+
+-- //7. edit tipe data nama_pelanggan menjadi varchar(50)
+MariaDB [dbtoko]> ALTER TABLE pelanggan MODIFY nama_pelanggan varchar(50
+);
+
+MariaDB [dbtoko]> DESC pelanggan;
++----------------+-------------+------+-----+---------+----------------+
+| Field          | Type        | Null | Key | Default | Extra          |
++----------------+-------------+------+-----+---------+----------------+
+| id             | int(11)     | NO   | PRI | NULL    | auto_increment |
+| kode           | varchar(10) | YES  | UNI | NULL    |                |
+| nama_pelanggan | varchar(50) | YES  |     | NULL    |                |
+| jk             | char(1)     | YES  |     | NULL    |                |
+| tmp_lahir      | varchar(20) | YES  |     | NULL    |                |
+| tgl_lahir      | date        | YES  |     | NULL    |                |
+| email          | varchar(30) | YES  |     | NULL    |                |
+| kartu_id       | int(11)     | NO   |     | NULL    |                |
+| alamat         | varchar(40) | YES  |     | NULL    |                |
++----------------+-------------+------+-----+---------+----------------+
