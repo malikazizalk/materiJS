@@ -353,3 +353,4 @@ MariaDB [dbtoko]> SELECT * FROM pelanggan AS p INNER JOIN kartu AS k ON p.kartu_
 |  6 | 011106 | Gayatri Putri  | P    | Jakarta    | 2002-09-01 | gayatri@gmail.com |        1 | NULL   |  1 | 10111 | Gold   |  20000 |  2000 |
 +----+--------+----------------+------+------------+------------+-------------------+----------+--------+----+-------+--------+--------+-------+
 6 rows in set (0.043 sec)
+
