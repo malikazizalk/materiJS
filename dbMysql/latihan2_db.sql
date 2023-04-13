@@ -1,18 +1,18 @@
-C:\Users\aziza>cd\xampp\mysql\bin
+-- C:\Users\aziza>cd\xampp\mysql\bin
 
-C:\xampp\mysql\bin>mysql -u root -p
-Enter password:
-ERROR 2002 (HY000): Can't connect to MySQL server on 'localhost' (10061)
+-- C:\xampp\mysql\bin>mysql -u root -p
+-- Enter password:
+-- ERROR 2002 (HY000): Can't connect to MySQL server on 'localhost' (10061)
 
-C:\xampp\mysql\bin>mysql -u root -p
-Enter password:
-Welcome to the MariaDB monitor.  Commands end with ; or \g.
-Your MariaDB connection id is 8
-Server version: 10.4.27-MariaDB mariadb.org binary distribution
+-- C:\xampp\mysql\bin>mysql -u root -p
+-- Enter password:
+-- Welcome to the MariaDB monitor.  Commands end with ; or \g.
+-- Your MariaDB connection id is 8
+-- Server version: 10.4.27-MariaDB mariadb.org binary distribution
 
-Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+-- Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
 
-Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+-- Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
 MariaDB [(none)]> Show databases;
 +--------------------+
@@ -62,18 +62,6 @@ MariaDB [dbtoko]> desc pelanggan
 +----------------+-------------+------+-----+---------+----------------+
 9 rows in set (0.090 sec)
 
-MariaDB [dbtoko]> INSERT INTO pelanggan (kode, nama, jk, tmp_lahir, tgl_lahir, email, kartu_id)
-VALUES
-    -> ('011101','Agung','L','Bandung','1997-08-07','agung@gmail.com',1);
-ERROR 1054 (42S22): Unknown column 'nama' in 'field list'
-MariaDB [dbtoko]> INSERT INTO pelanggan (kode, nama_pelanggan, jk, tmp_lahir, tgl_lahir, email,
-kartu_id) VALUES
-    -> ('011101','Agung','L','Bandung','1997-08-07','agung@gmail.com',1);
-Query OK, 1 row affected (0.019 sec)
-
-MariaDB [dbtoko]> INSERT INTO pelanggan (kode, nama, jk, tmp_lahir, tgl_lahir, email, kartu_id) VALUES
-    -> ;
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
 MariaDB [dbtoko]> INSERT INTO pelanggan (kode, nama_pelanggan, jk, tmp_lahir, tgl_lahir, email, kartu_id) VALUES
     -> ('011102','Pandan Wangi','L','Yogyakarta','1997-08-07','pandan@gmail.com',2),
     -> ('011103','Sekar','P','Kediri','2001-09-06','sekar@gmail.com',1),
@@ -120,24 +108,24 @@ MariaDB [dbtoko]> desc jenis_produk;
 +-------+-------------+------+-----+---------+----------------+
 3 rows in set (0.011 sec)
 
-MariaDB [dbtoko]> INSERT INTO jenis_produk (nama, ket) VALUES
-    -> ('elektronik','tersedia'),
-    -> ('makanan','tersedia),
-    '> ('minuman','tidak tersedia'),
-    '> ('furnitur','tersedia');
-    '> ;
-    '> Bye
-Ctrl-C -- exit!
+-- MariaDB [dbtoko]> INSERT INTO jenis_produk (nama, ket) VALUES
+--     -> ('elektronik','tersedia'),
+--     -> ('makanan','tersedia),
+--     '> ('minuman','tidak tersedia'),
+--     '> ('furnitur','tersedia');
+--     '> ;
+--     '> Bye
+-- Ctrl-C -- exit!
 
-C:\xampp\mysql\bin>mysql -u root -p
-Enter password:
-Welcome to the MariaDB monitor.  Commands end with ; or \g.
-Your MariaDB connection id is 9
-Server version: 10.4.27-MariaDB mariadb.org binary distribution
+-- C:\xampp\mysql\bin>mysql -u root -p
+-- Enter password:
+-- Welcome to the MariaDB monitor.  Commands end with ; or \g.
+-- Your MariaDB connection id is 9
+-- Server version: 10.4.27-MariaDB mariadb.org binary distribution
 
-Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+-- Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
 
-Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+-- Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
 MariaDB [(none)]> use dbtoko;
 Database changed
