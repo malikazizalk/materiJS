@@ -1,0 +1,44 @@
+Dari kebutuhan di atas, terdapat empat tabel utama dalam aplikasi sistem informasi pelatihan pegawai, yaitu:
+
+Tabel Pelatihan
+
+id_pelatihan (primary key)
+nama_pelatihan
+tanggal_pelatihan
+Tabel Pendaftaran Pelatihan
+
+id_pendaftaran (primary key)
+id_pelatihan (foreign key ke tabel Pelatihan)
+nama_peserta
+jabatan_peserta
+departemen_peserta
+tanggal_pendaftaran
+Tabel Narasumber
+
+id_narasumber (primary key)
+nama_narasumber
+bidang_keahlian
+Tabel Materi Pelatihan
+
+id_materi (primary key)
+id_pelatihan (foreign key ke tabel Pelatihan)
+id_narasumber (foreign key ke tabel Narasumber)
+judul_materi
+deskripsi_materi
+Tabel Presensi
+
+id_presensi (primary key)
+id_pendaftaran (foreign key ke tabel Pendaftaran Pelatihan)
+hadir (boolean)
+tanggal_kehadiran
+
+
+Penjelasan relasi antar entitas:
+
+Hubungan relasi antar tabel dalam desain database ini adalah sebagai berikut:
+
+Tabel Pendaftaran memiliki relasi many-to-one dengan tabel Pelatihan, dimana setiap pendaftaran terkait dengan satu kegiatan pelatihan, dan setiap kegiatan pelatihan dapat memiliki banyak pendaftaran.
+
+Tabel Materi memiliki relasi many-to-one dengan tabel Narasumber, dimana setiap materi terkait dengan satu narasumber, dan setiap narasumber dapat memberikan banyak materi.
+
+Tabel Presensi memiliki relasi many-to-one dengan tabel Pendaftaran dan Materi, dimana setiap presensi terkait dengan satu pendaftaran dan satu materi, dan setiap pendaftaran dan materi dapat memiliki banyak presensi.
