@@ -204,6 +204,8 @@ MariaDB [dbtoko]> SELECT * FROM pesanan;
 MariaDB [dbtoko]> COMMIT;
 Query OK, 0 rows affected (0.031 sec)
 
+
+-- membuat fungsi show
 MariaDB [dbtoko]> DELIMITER $$
 MariaDB [dbtoko]> SELECT * FROM produk;
     -> $$
@@ -237,9 +239,19 @@ MariaDB [dbtoko]> CALL showProduks();
 | Meja Makan |    1000000 |    2000000 |
 | Taro       |       4000 |       5000 |
 +------------+------------+------------+
-5 rows in set (0.033 sec)
+5 rows in set (0.033 secd\c)
 
 Query OK, 0 rows affected (0.037 sec)
+
+
+-- membuat fungsi input
+MariaDB [dbtoko]> SELECT * FROM pesanan;
++----+------------+--------+--------------+
+| id | tanggal    | total  | pelanggan_id |
++----+------------+--------+--------------+
+|  1 | 2023-03-03 | 200000 |            1 |
++----+------------+--------+--------------+
+1 row in set (0.000 sec)
 
 MariaDB [dbtoko]> DELIMITER $$
 MariaDB [dbtoko]> CREATE PROCEDURE addPesanan(tanggal
