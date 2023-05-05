@@ -1,6 +1,15 @@
 <?php
 // include_once 'top.php';
 // include_once 'menu.php';
+
+
+$model = new Produk();
+$data_produk = $model->dataProduk();
+
+// foreach ($data_produk as $row){
+//     print $row['kode'];
+// }
+
 ?>
 
                 <h1 class="mt-4">Tables</h1>
@@ -24,34 +33,66 @@
                            <table id="datatablesSimple">
                                <thead>
                                    <tr>
-                                       <th>Name</th>
-                                       <th>Position</th>
-                                       <th>Office</th>
-                                       <th>Age</th>
-                                       <th>Start date</th>
-                                       <th>Salary</th>
+                                       <th>No</th>
+                                       <th>Kode</th>
+                                       <th>Nama</th>
+                                       <th>Harga Beli</th>
+                                       <th>Harga Jual</th>
+                                       <th>Stok</th>
+                                       <th>Minimal Stkok</th>
+                                       <th>Jenis Stkok</th>
                                    </tr>
                                </thead>
                                <tfoot>
                                    <tr>
-                                       <th>Name</th>
-                                       <th>Position</th>
-                                       <th>Office</th>
-                                       <th>Age</th>
-                                       <th>Start date</th>
-                                       <th>Salary</th>
+                                       <th>No</th>
+                                       <th>Kode</th>
+                                       <th>Nama</th>
+                                       <th>Harga Beli</th>
+                                       <th>Harga Jual</th>
+                                       <th>Stok</th>
+                                       <th>Minimal Stkok</th>
+                                       <th>Jenis Stkok</th>
                                    </tr>
                                </tfoot>
                                <tbody>
+
+                               <?php
+                               $no = 1;
+                               foreach($data_produk as $row){
+                                
+                               ?>
                                    <tr>
-                                       <td>Tiger Nixon</td>
-                                       <td>System Architect</td>
-                                       <td>Edinburgh</td>
-                                       <td>61</td>
-                                       <td>2011/04/25</td>
-                                       <td>$320,800</td>
+                                        <td><?= $no ?></td>
+                                       <td><?= $row['kode']?></td>
+                                       <td><?= $row['nama']?></td>
+                                       <td><?= $row['harga_beli']?></td>
+                                       <td><?= $row['harga_jual']?></td>
+                                       <td><?= $row['stok']?></td>
+                                       <td><?= $row['min_stok']?></td>
+                                       <td><?= $row['jenis_produk_id']?></td>
                                    </tr>
-                                   <tr>
+                                <?php
+                                $no++;
+                                }
+                                ?>   
+                               </tbody>
+                           </table>
+                       </div>
+                   </div>
+                   </div>
+                   </div>
+
+<?php
+// include_once 'bottom.php';
+?>
+
+
+
+
+
+                                    <!-- 
+                                    <tr>
                                        <td>Garrett Winters</td>
                                        <td>Accountant</td>
                                        <td>Tokyo</td>
@@ -498,14 +539,4 @@
                                        <td>27</td>
                                        <td>2011/01/25</td>
                                        <td>$112,000</td>
-                                   </tr>
-                               </tbody>
-                           </table>
-                       </div>
-                   </div>
-                   </div>
-                   </div>
-
-<?php
-// include_once 'bottom.php';
-?>
+                                   </tr> -->

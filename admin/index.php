@@ -1,5 +1,8 @@
 <?php
 //memanggil dan memproses file bagian atas
+include_once 'koneksi.php';
+include_once 'models/Produk.php';
+include_once 'models/Jenis_Produk.php';
 include_once 'top.php';
 //memanggil dan memproses bagian menu
 include_once 'menu.php';
