@@ -4,7 +4,7 @@
 
 
 $model = new Pelanggan();
-$pelanggan = $model->Pelanggan();
+$data_pelanggan = $model->dataPelanggan();
 
 // foreach ($data_produk as $row){
 //     print $row['kode'];
@@ -19,15 +19,18 @@ $pelanggan = $model->Pelanggan();
                    </ol>
                    <div class="card mb-4">
                        <div class="card-body">
-                           DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the
+                            DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the
                            <a target="_blank" href="https://datatables.net/">official DataTables documentation</a>
                            .
+                                                     
                        </div>
                    </div>
                    <div class="card mb-4">
                        <div class="card-header">
-                           <i class="fas fa-table me-1"></i>
-                           DataTable Example
+                           <!-- <i class="fas fa-table me-1"></i>
+                           DataTable Example -->
+
+                           <a href="index.php?url=pelanggan_form" class="btn btn-primary btn-sm"> Tambah</a> 
                        </div>
                        <div class="card-body">
                            <table id="datatablesSimple">
@@ -42,7 +45,7 @@ $pelanggan = $model->Pelanggan();
                                        <th>email</th>
                                        <th>ID kartu</th>
                                        <th>Alamat</th>
-                                       
+                                       <th>Action</th>
                                    </tr>
                                </thead>
                                <tfoot>
@@ -56,14 +59,14 @@ $pelanggan = $model->Pelanggan();
                                        <th>email</th>
                                        <th>ID kartu</th>
                                        <th>Alamat</th>
-                                       
+                                       <th>Action</th>
                                    </tr>
                                </tfoot>
                                <tbody>
 
                                <?php
                                $no = 1;
-                               foreach($pelanggan as $row){
+                               foreach($data_pelanggan as $row){
                                 
                                ?>
                                    <tr>
@@ -76,7 +79,15 @@ $pelanggan = $model->Pelanggan();
                                        <td><?= $row['email']?></td>
                                        <td><?= $row['kartu_id']?></td>
                                        <td><?= $row['alamat']?></td>
-                                      
+                                       <td>
+                                       <form action="pelanggan_controller.php" method="POST">
+                                            <a href="index.php?url=pelanggan_detail&id=<?= $row ['id'] ?>" class="btn btn-info btn-sm">Detail</a>
+                                            <a href="" class="btn btn-warning btn-sm">Ubah</a>
+                                            <a href="" class="btn btn-danger btn-sm">Hapus</a>
+
+                                            <input type="hidden" name="idx" value="<?= $row ['id'] ?>">
+                                       </form> 
+                                       </td>
                                    </tr>
                                 <?php
                                 $no++;

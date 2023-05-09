@@ -26,8 +26,11 @@ $data_produk = $model->dataProduk();
                    </div>
                    <div class="card mb-4">
                        <div class="card-header">
-                           <i class="fas fa-table me-1"></i>
-                           DataTable Example
+                           <!-- <i class="fas fa-table me-1"></i>
+                           DataTable Example -->
+
+                           <!-- membuat tombol tambah dan mengarahkan ke file produk-FORM.php -->
+                           <a href="index.php?url=product_form" class="btn btn-primary btn-sm"> Tambah</a>
                        </div>
                        <div class="card-body">
                            <table id="datatablesSimple">
@@ -36,11 +39,12 @@ $data_produk = $model->dataProduk();
                                        <th>No</th>
                                        <th>Kode</th>
                                        <th>Nama</th>
-                                       <th>Harga Beli</th>
                                        <th>Harga Jual</th>
+                                       <th>Harga Beli</th>
                                        <th>Stok</th>
-                                       <th>Minimal Stkok</th>
-                                       <th>Jenis Stkok</th>
+                                       <th>Minimal Stok</th>
+                                       <th>Jenis Produk ID</th>
+                                       <th>Action</th>
                                    </tr>
                                </thead>
                                <tfoot>
@@ -48,11 +52,12 @@ $data_produk = $model->dataProduk();
                                        <th>No</th>
                                        <th>Kode</th>
                                        <th>Nama</th>
-                                       <th>Harga Beli</th>
                                        <th>Harga Jual</th>
+                                       <th>Harga Beli</th>
                                        <th>Stok</th>
-                                       <th>Minimal Stkok</th>
-                                       <th>Jenis Stkok</th>
+                                       <th>Minimal Stok</th>
+                                       <th>Jenis Produk ID</th>
+                                       <th>Action</th>
                                    </tr>
                                </tfoot>
                                <tbody>
@@ -71,6 +76,15 @@ $data_produk = $model->dataProduk();
                                        <td><?= $row['stok']?></td>
                                        <td><?= $row['min_stok']?></td>
                                        <td><?= $row['jenis_produk_id']?></td>
+                                       <td>
+                                       <form action="produk_controller.php" method="POST">
+                                            <a href="index.php?url=product_detail&id=<?= $row ['id'] ?>" class="btn btn-info btn-sm">Detail</a>
+                                            <a href="" class="btn btn-warning btn-sm">Ubah</a>
+                                            <a href="" class="btn btn-danger btn-sm">Hapus</a>
+
+                                            <input type="hidden" name="idx" value="<?= $row ['id'] ?>">
+                                       </form> 
+                                       </td>
                                    </tr>
                                 <?php
                                 $no++;
