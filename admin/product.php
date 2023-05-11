@@ -10,6 +10,9 @@ $data_produk = $model->dataProduk();
 //     print $row['kode'];
 // }
 
+$sesi = $_SESSION['MEMBER'];
+if(isset($sesi)){
+
 ?>
 
                 <h1 class="mt-4">Tables</h1>
@@ -78,12 +81,23 @@ $data_produk = $model->dataProduk();
                                        <td><?= $row['jenis_produk_id']?></td>
                                        <td>
                                        <form action="produk_controller.php" method="POST">
+                                       
+                                            <?php
+                                            if($sesi['role'] != 'staff'){
+                                            ?>
+
                                             <a href="index.php?url=product_detail&id=<?= $row ['id'] ?>" class="btn btn-info btn-sm">Detail</a>
                                             <a href="index.php?url=product_form&idedit=<?= $row ['id'] ?>" class="btn btn-warning btn-sm">Ubah</a>
+
                                             <button type="submit" class="btn btn-danger btn-sm" name="proses" value="hapus"
                                             onclick="return confirm('Anda yakin ingin menghapus data ini?')">Hapus</button>
 
                                             <input type="hidden" name="idx" value="<?= $row ['id'] ?>">
+
+                                            <?php
+                                            }
+                                            ?>
+                                            
                                        </form> 
                                        </td>
                                    </tr>
@@ -99,6 +113,11 @@ $data_produk = $model->dataProduk();
                    </div>
 
 <?php
+
+} else {
+    echo '<script> Alert("anda tidak boleh masuk"); history.back();</script>';
+}
+
 // include_once 'bottom.php';
 ?>
 
