@@ -73,8 +73,9 @@ $data_pesanan = $model->dataPesanan();
                                        <td>
                                        <form action="pesanan_controller.php" method="POST">
                                             <a href="index.php?url=pesanan_detail&id=<?= $row ['id'] ?>" class="btn btn-info btn-sm">Detail</a>
-                                            <a href="" class="btn btn-warning btn-sm">Ubah</a>
-                                            <a href="" class="btn btn-danger btn-sm">Hapus</a>
+                                            <a href="index.php?url=pesanan_form&idedit=<?= $row ['id'] ?>" class="btn btn-warning btn-sm">Ubah</a>
+                                            <button type="submit" class="btn btn-danger btn-sm" name="proses" value="hapus"
+                                            onclick="return confirm('Anda yakin ingin menghapus data ini?')">Hapus</button>
 
                                             <input type="hidden" name="idx" value="<?= $row ['id'] ?>">
                                        </form> 
