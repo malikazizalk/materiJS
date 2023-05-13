@@ -8,6 +8,10 @@ include_once 'models/Pelanggan.php';
 include_once 'models/Pesanan.php';
 include_once 'models/Kartu.php';
 include_once 'models/Member.php';
+
+$sesi = $_SESSION['MEMBER'];
+if(isset($sesi)){
+
 include_once 'top.php';
 //memanggil dan memproses bagian menu
 include_once 'menu.php';
@@ -36,4 +40,10 @@ include_once 'menu.php';
 <?php
 //memanggil file bagian bawah
 include_once 'buttom.php';
+
+
+} else {
+    echo '<script> Alert("anda tidak boleh masuk"); history.back();</script>';
+}
+
 ?>

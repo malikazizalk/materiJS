@@ -15,7 +15,7 @@ $model = new Member();
 $rs = $model->cekLogin($data); //cekLogin ini diarahkan ke models/Member.php 
 if(!empty($rs)){
     $_SESSION['MEMBER'] = $rs;
-    header('Location:index.php?url=product');
+    header('Location:http://localhost/msibphp/materi_msib_htp/admin/index.php?url=product');
 }
 else {
     echo '<script> alert("user/password anda salah"); history.back();</script>';

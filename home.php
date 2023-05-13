@@ -1,4 +1,7 @@
-
+<?php
+$produk = new Produk();
+$prod = $produk->dataProduk();
+?>
 
 
 
@@ -188,6 +191,13 @@
                 
 				<div class="row">
 					<!-- single product -->
+
+					<?php
+
+					foreach ($prod as $produk ) {
+					?>
+                    
+
 					<div class="col-lg-3 col-md-6">
                         
 						<div class="single-product">
@@ -195,10 +205,12 @@
 							<div class="product-details">
 							<!-- panggil data pelanggan-->
                             	
-                                
+                                <h6>
+									<?= $produk['nama'] ?>
+								</h6>
                        
 								<div class="price">
-									<h6>$150.00</h6>
+									<h6><?= $produk['harga_jual'] ?></h6>
 									<h6 class="l-through">$210.00</h6>
 								</div>
                                 
@@ -224,9 +236,16 @@
 							</div>
 						</div>
 					</div>
-                    
+					
+					<?php
+					}
+					?>
+					<!-- batas looping -->
+
 					<!-- single product -->
-					<div class="col-lg-3 col-md-6">
+
+
+					<!-- <div class="col-lg-3 col-md-6">
 						<div class="single-product">
 							<img class="img-fluid" src="img/product/p2.jpg" alt="">
 							<div class="product-details">
@@ -257,9 +276,13 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
+
 					<!-- single product -->
-					<div class="col-lg-3 col-md-6">
+
+
+
+					<!-- <div class="col-lg-3 col-md-6">
 						<div class="single-product">
 							<img class="img-fluid" src="img/product/p3.jpg" alt="">
 							<div class="product-details">
@@ -289,9 +312,13 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
+
 					<!-- single product -->
-					<div class="col-lg-3 col-md-6">
+
+
+
+					<!-- <div class="col-lg-3 col-md-6">
 						<div class="single-product">
 							<img class="img-fluid" src="img/product/p4.jpg" alt="">
 							<div class="product-details">
@@ -322,9 +349,13 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
+
 					<!-- single product -->
-					<div class="col-lg-3 col-md-6">
+
+
+
+					<!-- <div class="col-lg-3 col-md-6">
 						<div class="single-product">
 							<img class="img-fluid" src="img/product/p5.jpg" alt="">
 							<div class="product-details">
@@ -355,9 +386,13 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
+
 					<!-- single product -->
-					<div class="col-lg-3 col-md-6">
+					
+					
+					
+					<!-- <div class="col-lg-3 col-md-6">
 						<div class="single-product">
 							<img class="img-fluid" src="img/product/p6.jpg" alt="">
 							<div class="product-details">
@@ -388,9 +423,13 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
+
 					<!-- single product -->
-					<div class="col-lg-3 col-md-6">
+					
+					
+					
+					<!-- <div class="col-lg-3 col-md-6">
 						<div class="single-product">
 							<img class="img-fluid" src="img/product/p7.jpg" alt="">
 							<div class="product-details">
@@ -421,9 +460,12 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 					<!-- single product -->
-					<div class="col-lg-3 col-md-6">
+					
+					
+					
+					<!-- <div class="col-lg-3 col-md-6">
 						<div class="single-product">
 							<img class="img-fluid" src="img/product/p8.jpg" alt="">
 							<div class="product-details">
@@ -454,7 +496,9 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
+
+
 				</div>
 			</div>
 		</div>
