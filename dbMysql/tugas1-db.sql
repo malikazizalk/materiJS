@@ -41,14 +41,10 @@ MariaDB [dbtoko]> DESC pesanan_items;
 | Field      | Type    | Null | Key | Default | Extra          |
 +------------+---------+------+-----+---------+----------------+
 | id         | int(11) | NO   | PRI | NULL    | auto_increment |
-| produk_id  | int(11) | NO   |     | NULL    |
-      |
-| pesanan_id | int(11) | NO   |     | NULL    |
-      |
-| qty        | int(11) | YES  |     | NULL    |
-      |
-| harga      | double  | YES  |     | NULL    |
-      |
+| produk_id  | int(11) | NO   |     | NULL    |                |
+| pesanan_id | int(11) | NO   |     | NULL    |                |
+| qty        | int(11) | YES  |     | NULL    |                |
+| harga      | double  | YES  |     | NULL    |                |
 +------------+---------+------+-----+---------+----------------+
 
 
@@ -66,14 +62,10 @@ MariaDB [dbtoko]> DESC vendor;
 | Field  | Type        | Null | Key | Default | Extra          |
 +--------+-------------+------+-----+---------+----------------+
 | id     | int(11)     | NO   | PRI | NULL    | auto_increment |
-| nomor  | varchar(4)  | YES  |     | NULL    |
-      |
-| nama   | varchar(40) | YES  |     | NULL    |
-      |
-| kota   | varchar(30) | YES  |     | NULL    |
-      |
-| kontak | varchar(30) | YES  |     | NULL    |
-      |
+| nomor  | varchar(4)  | YES  |     | NULL    |                |
+| nama   | varchar(40) | YES  |     | NULL    |                |
+| kota   | varchar(30) | YES  |     | NULL    |                |
+| kontak | varchar(30) | YES  |     | NULL    |                |
 +--------+-------------+------+-----+---------+----------------+
 
 

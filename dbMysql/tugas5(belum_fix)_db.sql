@@ -138,7 +138,7 @@ MariaDB [dbtoko]> SELECT * FROM pesanan;
 3 rows in set (0.001 sec)
 
 MariaDB [dbtoko]> ALTER TABLE pesanan DROP pesanan_id;
-ERROR 1091 (42000): Can't DROP COLUMN `pesanan_id`; check that it exists
+ERROR 1091 (42000): Cant DROP COLUMN `pesanan_id`; check that it exists
 MariaDB [dbtoko]> ALTER TABLE pesanan ADD pesanan_id int;
 Query OK, 0 rows affected (0.052 sec)
 Records: 0  Duplicates: 0  Warnings: 0
@@ -266,7 +266,7 @@ MariaDB [dbtoko]> INSERT INTO pemayaran VALUES
     -> ('','0001','2021-02-12',2000000,1,1,1,'belum lunas'),
     -> ('','0001','2021-02-12',12000000,2,2,2,'lunas')
     -> ;
-ERROR 1146 (42S02): Table 'dbtoko.pemayaran' doesn't exist
+ERROR 1146 (42S02): Table 'dbtoko.pemayaran' doesnt exist
 MariaDB [dbtoko]> INSERT INTO pembayaran VALUES
     -> ('','0001','2021-02-12',2000000,1,1,1,'belum lunas'),
     -> ('','0001','2021-02-12',12000000,2,2,2,'lunas')
@@ -340,16 +340,11 @@ Current database: dbtoko
 | Field          | Type        | Null | Key | Default | Extra          |
 +----------------+-------------+------+-----+---------+----------------+
 | id             | int(11)     | NO   | PRI | NULL    | auto_increment |
-| tanggal        | date        | YES  |     | NULL    |
-       |
-| total          | double      | YES  |     | NULL    |
-       |
-| pelanggan_id   | int(11)     | NO   |     | NULL    |
-       |
-| pesanan_id     | int(11)     | YES  |     | NULL    |
-       |
-| status_pesanan | varchar(20) | YES  |     | NULL    |
-       |
+| tanggal        | date        | YES  |     | NULL    |                |
+| total          | double      | YES  |     | NULL    |                |
+| pelanggan_id   | int(11)     | NO   |     | NULL    |                |
+| pesanan_id     | int(11)     | YES  |     | NULL    |                |
+| status_pesanan | varchar(20) | YES  |     | NULL    |                |
 +----------------+-------------+------+-----+---------+----------------+
 6 rows in set (0.107 sec)
 
@@ -392,22 +387,14 @@ MariaDB [dbtoko]> DESC pelanggan;
 | Field          | Type        | Null | Key | Default | Extra          |
 +----------------+-------------+------+-----+---------+----------------+
 | id             | int(11)     | NO   | PRI | NULL    | auto_increment |
-| kode           | varchar(10) | YES  | UNI | NULL    |
-       |
-| nama_pelanggan | varchar(50) | YES  |     | NULL    |
-       |
-| jk             | char(1)     | YES  |     | NULL    |
-       |
-| tmp_lahir      | varchar(20) | YES  |     | NULL    |
-       |
-| tgl_lahir      | date        | YES  |     | NULL    |
-       |
-| email          | varchar(30) | YES  |     | NULL    |
-       |
-| kartu_id       | int(11)     | NO   |     | NULL    |
-       |
-| alamat         | varchar(40) | YES  |     | NULL    |
-       |
+| kode           | varchar(10) | YES  | UNI | NULL    |                |
+| nama_pelanggan | varchar(50) | YES  |     | NULL    |                |
+| jk             | char(1)     | YES  |     | NULL    |                |
+| tmp_lahir      | varchar(20) | YES  |     | NULL    |                |
+| tgl_lahir      | date        | YES  |     | NULL    |                |
+| email          | varchar(30) | YES  |     | NULL    |                |
+| kartu_id       | int(11)     | NO   |     | NULL    |                |
+| alamat         | varchar(40) | YES  |     | NULL    |                |
 +----------------+-------------+------+-----+---------+----------------+
 9 rows in set (0.119 sec)
 
@@ -485,10 +472,10 @@ MariaDB [dbtoko]> CREATE TRIGGER update_status_pembayaran AFTER INSERT ON pembay
     -> WHERE id_pembayaran = NEW.id_pembayaran;
     -> END;
     -> $$
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ;
 UPDATE pembayaran;
 SET status_pembayaran = 'lunas';
-WHERE id_pembayaran = N...' at line 5
+WHERE id_pembayaran = N... at line 5
 MariaDB [dbtoko]> CREATE TRIGGER update_status_pembayaran AFTER INSERT ON pembayaran
     -> FOR EACH ROW
     -> BEGIN
@@ -500,11 +487,11 @@ MariaDB [dbtoko]> CREATE TRIGGER update_status_pembayaran AFTER INSERT ON pembay
     -> WHERE id_pembayaran = NEW.id_pembayaran;
     -> END;
     -> $$
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ;
 END IF;
 UPDATE pembayaran;
 SET status_pembayaran = 'lunas';
-WHERE id_pembay...' at line 5
+WHERE id_pembay... at line 5
 MariaDB [dbtoko]> CREATE TRIGGER update_status_pembayaran AFTER INSERT ON pembayaran
     -> FOR EACH ROW
     -> BEGIN
@@ -516,11 +503,11 @@ MariaDB [dbtoko]> CREATE TRIGGER update_status_pembayaran AFTER INSERT ON pembay
     -> WHERE id_pembayaran = NEW.id_pembayaran;
     -> END;
     -> $$
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ;
 END IF;
 UPDATE pembayaran;
 SET status_pembayaran = 'lunas';
-WHERE id_pembay...' at line 5
+WHERE id_pembay... at line 5
 MariaDB [dbtoko]> CREATE TRIGGER update_status_pembayaran AFTER INSERT ON pembayaran
     -> FOR EACH ROW
     -> BEGIN
@@ -532,11 +519,11 @@ MariaDB [dbtoko]> CREATE TRIGGER update_status_pembayaran AFTER INSERT ON pembay
     -> WHERE id_pembayaran = NEW.id_pembayaran;
     -> END;
     -> $$
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ;
 END IF;
 UPDATE pembayaran;
 SET status_pembayaran = 'lunas';
-WHERE id_pembay...' at line 5
+WHERE id_pembay... at line 5
 MariaDB [dbtoko]> CREATE TRIGGER update_status_pembayaran AFTER INSERT ON pembayaran
     -> FOR EACH ROW
     -> BEGIN
@@ -549,9 +536,9 @@ MariaDB [dbtoko]> CREATE TRIGGER update_status_pembayaran AFTER INSERT ON pembay
     -> END IF;
     -> END;
     -> $$
-ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE id_pembayaran = NEW.id_pembayaran;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near WHERE id_pembayaran = NEW.id_pembayaran;
 END IF;
-END' at line 9
+END at line 9
 MariaDB [dbtoko]> CREATE TRIGGER update_status_pembayaran AFTER INSERT ON pembayaran
     -> FOR EACH ROW
     -> BEGIN
@@ -624,7 +611,7 @@ MariaDB [dbtoko]> SELECT * FROM pembayaran;
 MariaDB [dbtoko]> INSERT INTO pembayaran (pembayaran_id, pesanan_id, status_pembayaran) VALUES
     -> (1, 1, 'lunas');
     -> $$
-ERROR 1442 (HY000): Can't update table 'pembayaran' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+ERROR 1442 (HY000): Cant update table 'pembayaran' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
 MariaDB [dbtoko]> drop trigger update_status_pembayaran;
     -> $$
 Query OK, 0 rows affected (0.038 sec)
@@ -694,8 +681,7 @@ MariaDB [dbtoko]> SELECT * FROM pembayaran;
 +----+------------+------------+----------+------+------------+---------------+-------------------+
 | id | nokuitansi | tanggal    | jumlah   | ke   | pesanan_id | pembayaran_id | status_pembayaran |
 +----+------------+------------+----------+------+------------+---------------+-------------------+
-|  5 | 0001       | 2021-02-12 |  2000000 |    1 |          1 |
-            1 | belum lunas       |
+|  5 | 0001       | 2021-02-12 |  2000000 |    1 |          1 |             1 | belum lunas       |
 |  6 | 0002       | 2021-04-14 | 12000000 |    2 |          2 |             2 | lunas             |
 +----+------------+------------+----------+------+------------+---------------+-------------------+
 2 rows in set (0.005 sec)
@@ -941,7 +927,7 @@ MariaDB [dbtoko]> SELECT * FROM pembayaran;
 MariaDB [dbtoko]> INSERT INTO pembayaran (pesanan_id, jumlah, status_pembayaran) VALUES
     ->  (1, 50000, 'lunas');
     -> $$
-ERROR 1442 (HY000): Can't update table 'pembayaran' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+ERROR 1442 (HY000): Cant update table 'pembayaran' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
 MariaDB [dbtoko]> drop trigger update_status_pembayaran;
     -> $$
 Query OK, 0 rows affected (0.003 sec)
@@ -1570,8 +1556,8 @@ INSERT ON pembayaran
     -> END IF;
     -> END;
     -> $$
-ERROR 1359 (HY000) drop trigger update_status_pembayaran;ran' already exists
-    -> $$dbtoko]> drop
+ERROR 1359 (HY000) drop trigger update_status_pembayaran;ran already exists
+    -> [$$dbtoko]> drop
 Query OK, 0 rows affected (0.071 sec)
 
 MariaDB [dbtoko]> CREATE TRIGGER update_status_pembayaran AFTER INSERT ON pembayaran
@@ -1757,8 +1743,7 @@ MariaDB [dbtoko]> SELECT * FROM pembayaran;
 | id | nokuitansi | tanggal    | jumlah   | ke   | pesanan_id | pembayaran_id | status_pembayaran |
 +----+------------+------------+----------+------+------------+---------------+-------------------+
 |  5 | 0001       | 2021-02-12 |  2000000 |    1 |          1 |             1 | belum lunas       |
-|  6 | 0002       | 2021-04-14 | 12000000 |    2 |          2 |
-            2 | lunas             |
+|  6 | 0002       | 2021-04-14 | 12000000 |    2 |          2 |             2 | lunas             |
 +----+------------+------------+----------+------+------------+---------------+-------------------+
 2 rows in set (0.032 sec)
 
@@ -1831,4 +1816,4 @@ MariaDB [dbtoko]> SELECT * FROM pembayaran;
 
 MariaDB [dbtoko]> INSERT INTO pembayaran (pembayaran_id, pesanan_id, status_pembayaran) VALUES (3, 1, 'lunas');
     -> $$
-ERROR 1442 (HY000): Can't update table 'pembayaran' in stored function/trigger because it is already used by statement which invoked this stored function/trigger
+ERROR 1442 (HY000): Cant update table 'pembayaran' in stored function/trigger because it is already used by statement which invoked this stored function/trigger

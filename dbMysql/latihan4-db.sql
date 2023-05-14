@@ -24,8 +24,7 @@ MariaDB [dbtoko]> DESC produk;
 | kode            | varchar(10) | YES  | UNI | NULL    |                |
 | nama            | varchar(45) | YES  |     | NULL    |                |
 | harga_beli      | double      | YES  |     | NULL    |                |
-| harga_jual      | double      | YES  |     | NULL    |
-        |
+| harga_jual      | double      | YES  |     | NULL    |                |
 | stok            | int(11)     | YES  |     | NULL    |                |
 | min_stok        | int(11)     | YES  |     | NULL    |                |
 | jenis_produk_id | int(11)     | NO   |     | NULL    |                |
@@ -225,12 +224,9 @@ MariaDB [dbtoko]> DESC pesanan;
  |
 +--------------+---------+------+-----+---------+----------------+
 | id           | int(11) | NO   | PRI | NULL    | auto_increment |
-| tanggal      | date    | YES  |     | NULL    |
- |
-| total        | double  | YES  |     | NULL    |
- |
-| pelanggan_id | int(11) | NO   |     | NULL    |
- |
+| tanggal      | date    | YES  |     | NULL    |                |
+| total        | double  | YES  |     | NULL    |                |
+| pelanggan_id | int(11) | NO   |     | NULL    |                |
 +--------------+---------+------+-----+---------+----------------+
 4 rows in set (0.067 sec)
 
