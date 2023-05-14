@@ -1664,7 +1664,8 @@ MariaDB [dbtoko]> CREATE TRIGGER update_status_pembayaran AFTER
 INSERT ON pembayaran
     -> FOR EACH ROW
     -> BEGIN
-    -> IF NEW.status_pembayaran = 'lunas' AND EXISTS (SELECT 1 FROM pesanan WHERE pesanan.pesanan_id = NEW.pesanan_id AND pesanan.status_pesanan = 'selesai')
+    -> IF NEW.status_pembayaran = 'lunas' AND EXISTS (SELECT 1 FROM pesanan WHERE pesanan.pesanan_id = NEW.pesanan_id AND 
+    pesanan.status_pesanan = 'selesai')
     -> THEN
     -> UPDATE pembayaran
     -> SET status_pembayaran = 'lunas'
@@ -1680,7 +1681,8 @@ Query OK, 0 rows affected (0.054 sec)
 MariaDB [dbtoko]> CREATE TRIGGER update_status_pembayaran AFTER INSERT ON pembayaran
     -> FOR EACH ROW
     -> BEGIN
-    -> IF NEW.status_pembayaran = 'lunas' AND EXISTS (SELECT 1 FROM pesanan WHERE pesanan.pesanan_id = NEW.pesanan_id AND pesanan.status_pesanan = 'selesai')
+    -> IF NEW.status_pembayaran = 'lunas' AND EXISTS (SELECT 1 FROM pesanan WHERE pesanan.pesanan_id = NEW.pesanan_id AND 
+    pesanan.status_pesanan = 'selesai')
     -> THEN
     -> UPDATE pembayaran
     -> SET status_pembayaran = 'lunas'
